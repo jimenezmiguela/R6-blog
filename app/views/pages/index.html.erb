@@ -1,0 +1,20 @@
+<h1>Blog Pages</h1>
+
+<% @pages.each do |page| %>
+<!-- <p> <%= page.title %></p> -->
+
+<!-- <p> <%= link_to "zup", "/link/path" %></p> ex showing link_to method-->
+
+<!-- <p> <%= link_to page.title, "/pages/#{page.id}" %></p> -->
+
+<!-- <p><%= link_to page.title, page_path(page) %></p> -->
+<!-- <%# line 8 replaced w/ 3rd argument in get function,
+  app/config/routes.rb,
+  get 		'/pages/:id', 		to: 'pages#show'		as: 'page' 	% %> -->
+
+
+<p><%= link_to page.title, page %></p>
+<%# can be simplified, you can just pass page object only %>
+
+<% end %>
+<%= link_to 'New Page', new_page_path %>
