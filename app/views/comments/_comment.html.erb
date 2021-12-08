@@ -1,0 +1,11 @@
+<div>
+  <strong><%= comment.name %> says:</strong>
+  <%= comment.content %>
+  <%# edit link %>
+  <div class="comment-admin">
+    <%# edit_post_comment_path, needs post to provide id, comment id %>
+    <%= link_to "Edit", edit_post_comment_path(@post, comment) %>
+    <%= link_to "Delete", [@post, comment], method: :delete %>
+  </div>
+
+</div>
